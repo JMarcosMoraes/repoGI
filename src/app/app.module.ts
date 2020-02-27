@@ -14,16 +14,11 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
-import { BarraNavegacaoComponent } from './barra-navegacao/barra-navegacao/barra-navegacao.component';
-import { MenuLateralComponent } from './barra-navegacao/menu-lateral/menu-lateral/menu-lateral.component';
+import { BarraNavegacaoComponent } from './barra-navegacao/barra-navegacao.component';
+import { MenuLateralComponent } from './barra-navegacao/menu-lateral/menu-lateral.component';
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        routing
-    ],
+
     declarations: [
         AppComponent,
         AlertComponent,
@@ -32,6 +27,12 @@ import { MenuLateralComponent } from './barra-navegacao/menu-lateral/menu-latera
         RegisterComponent,
         BarraNavegacaoComponent,
         MenuLateralComponent
+    ],
+    imports: [
+        BrowserModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        routing
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

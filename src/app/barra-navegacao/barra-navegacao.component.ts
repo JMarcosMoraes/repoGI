@@ -8,13 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class BarraNavegacaoComponent implements OnInit {
 
   @Output()
-  private _onToggle = new EventEmitter();
-  public get onToggle() {
-    return this._onToggle;
-  }
-  public set onToggle(value) {
-    this._onToggle = value;
-  }
+  private onToggle = new EventEmitter();
 
   constructor() { }
 

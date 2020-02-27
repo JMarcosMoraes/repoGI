@@ -6,18 +6,27 @@
     </div>
 </nav>
 
-<!-- main app container -->
-<div class="jumbotron">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 offset-sm-3">
-                <alert></alert>
-                <router-outlet></router-outlet>
+<app-barra-navegacao (onToggle)="menuLateral.toggle()"></app-barra-navegacao>
+<div class="main">
+    <app-menu-lateral #menuLateral></app-menu-lateral>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+
+
+    <!-- main app container -->
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 offset-sm-3">
+                    <alert></alert>
+                    <router-outlet></router-outlet>
+                </div>
             </div>
         </div>
     </div>
+    
 </div>
-
 <!-- credits -->
 <div class="text-center">
   <p>PRODESP</p>
